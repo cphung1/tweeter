@@ -3,6 +3,7 @@ article {
   border: 3px solid black;
   padding: 1em;
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 article header {
@@ -20,10 +21,22 @@ article header img {
   height: 3.5em;
 }
 
-article header p {
+article header div p {
   float: right;
+}
+
+article header span p {
+  display: none;
 }
 
 article footer {
   border-top: 4px solid;
+}
+
+article:hover  header span p {
+  display: flex;
+  color: #cec9f0;
+}
+article:hover {
+  box-shadow: 10px 10px #cec9f0;
 }

@@ -10,6 +10,5 @@ $(document).ready(() => {
       counter.removeClass("negativeNum");
     }
 
-    console.log(findCounter)
   });
 });
