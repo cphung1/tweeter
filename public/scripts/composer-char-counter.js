@@ -5,10 +5,11 @@ $(document).ready(() => {
     let counter = findCounter.text(140 - len);
 
     if (counter.text() < 0) {
-      counter.addClass("negativeNum")
+      counter.addClass("negativeNum");
     } else {
-      counter.removeClass("negativeNum")
+      counter.removeClass("negativeNum");
     }
 
-  })
+    console.log(findCounter)
+  });
 });

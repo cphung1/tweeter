@@ -1,0 +1,29 @@
+
+article {
+  border: 3px solid black;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+article header {
+  margin-top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+article header img {
+  float: left;
+  height: 3.5em;
+}
+
+article header p {
+  float: right;
+}
+
+article footer {
+  border-top: 4px solid;
+}

@@ -1,3 +1,7 @@
+.new-tweet {
+  margin-bottom: 4em;
+}
+
 textarea {
   width: 100%;
   border: 0;
@@ -13,6 +17,10 @@ textarea {
 .counter {
   float: right;
   font-family: "Bungee";
+}
+
+.negativeNum {
+  color: red;
 }
 
 input[type="submit"] {
