@@ -4,37 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const moment = require('moment');
-moment().format();
-
-$(document).ready(() => {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-  
-
-  
+$(function() {  
   // loops through tweets
   // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
@@ -44,8 +14,9 @@ $(document).ready(() => {
       $('.tweets-container').append(value)
     }
   }
-
+  
   const createTweetElement = function(tweet) {
+    let time = moment(tweet["created_at"]).fromNow();
     let $tweet = $(`
       <article>
         <header>
@@ -57,16 +28,41 @@ $(document).ready(() => {
            <p>${tweet["user"]["handle"]}</p>
           </span>
         </header>
-        <p>${tweet["content"]["text"]}</p>
+        <p class="tweetText">${tweet["content"]["text"]}</p>
         <footer>
-          <h6>${moment(tweet["created_at"]).fromtNow()}</h6>
+          <h6>${time}</h6>
         </footer>
       </article>
       `).addClass('tweet');
-
+  
     return $tweet
   }
-  
-  renderTweets(data);
 
-})
+  $('.new-tweet form').submit(function() {
+    event.preventDefault();
+    let $inputLen = $(this).text();
+    let $inputText = $(this).find('textarea').val().trim();
+    if ($inputText === '' || $inputText === null) {
+      alert("Cannot be left blank")
+    } else if ($inputLen < 0) {
+      alert("Input is too long")
+    } else {
+      $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })
+    }
+
+  })
+
+  const loadTweets = function() {
+    $.ajax('/tweets', { method: 'GET'})
+      .done(function(arrayOfTweets) {
+      renderTweets(arrayOfTweets)
+      })
+  }
+  
+  loadTweets();
+
+
+  
+});
+
+
