@@ -40,3 +40,7 @@ article:hover  header span p {
 article:hover {
   box-shadow: 10px 10px #cec9f0;
 }
+
+.tweetText {
+  word-wrap: break-word;;
+}
