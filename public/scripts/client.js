@@ -41,6 +41,7 @@ $(function() {
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
   const renderTweets = function(tweets) {
+    $('.alert').hide();
     $('.tweets-container').empty();
     for (const elements of tweets) {
       let value = createTweetElement(elements);
@@ -64,10 +65,10 @@ $(function() {
     let $inputLen = $(this).text();
     let $inputText = $(this).find('textarea').val().trim();
     if ($inputText === '' || $inputText === null) {
-      alert("Cannot be left blank")
+      $('.alert').text("⚠️ Please enter text").show();
       $(this).find('textarea').focus();
     } else if ($inputLen < 0) {
-      alert("Input is too long")
+      $('.alert').text("⚠️ Message is too long").show();
       $(this).find('textarea').focus();
     } else {
       $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })

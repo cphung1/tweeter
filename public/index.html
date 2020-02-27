@@ -28,6 +28,9 @@
   <!-- New Tweet CSS -->
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
+    <!-- Error Msg CSS -->
+    <link rel="stylesheet" href="/styles/error-msg.css" type="text/css" />
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   
@@ -39,13 +42,24 @@
   <!-- Charcter Count JS -->
   <script src="/scripts/composer-char-counter.js"></script>
 
+  <!-- Charcter Count JS -->
+  <script src="/scripts/compose-btn.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-a11y="true"></script>
 </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <span class="newTweet" >Write a new tweet</span>
+      <div>
+        <p>Write a new tweet</p>
+        <button id="new-tweet-btn"> 
+          <i class="fas fa-angle-double-down"></i>
+        </button>
+      </div>
+      
     </nav>
 
     <header> 
@@ -60,6 +74,10 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <div class="alert">
+        <strong>Danger!</strong> Error
+      </div>
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form>
