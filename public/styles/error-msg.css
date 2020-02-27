@@ -1,3 +1,4 @@
+/* error message pop up */
 .alert {
   padding: 1.5rem;
   color: red;
@@ -7,6 +8,7 @@
   font-weight: bold;
 }
 
+/* breakpoint for desktop */
 @media only screen and (min-width: 1024px) {
   .alert {
     width: 60%;
@@ -14,5 +16,4 @@
     margin-top: 0;
     margin-bottom: 1.5em
   }
-
 }

@@ -1,5 +1,4 @@
 $(function() {  
-  
   // hides error alert
   // alert only shows when user input field is empty or too long
   $('.alert').hide();
@@ -37,7 +36,6 @@ $(function() {
         </footer>
       </article>
       `).addClass('tweet');
-
     return $tweet;
   }
 
@@ -69,8 +67,10 @@ $(function() {
   // if valid input loads new tweet on page
   $('.new-tweet form').submit(function() {
     event.preventDefault();
+
     let $inputLen = $(this).text();
     let $inputText = $(this).find('textarea').val().trim();
+
     if ($inputText === '' || $inputText === null) {
       $('.alert').text("⚠️ Error: Please enter text").show();
       $(this).find('textarea').focus();
@@ -89,7 +89,6 @@ $(function() {
 
   // inital load of all existing tweets onto page
   loadTweets();
-
 });
 
 

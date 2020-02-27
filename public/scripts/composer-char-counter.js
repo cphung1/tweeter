@@ -1,7 +1,6 @@
 // calculates and displays the character count of input
 $(function() {
   $('textarea').on('input', function() {
-
     // hides error message once user starts typing again
     $('.alert').hide();
 

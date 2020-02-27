@@ -1,3 +1,4 @@
+/* Navigation bar */
 nav {
   position: fixed;
   top: 0px;
@@ -10,27 +11,19 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-
 .logo {
   font-family: "Bungee";
   font-size: 1.5em
 }
-
-nav label {
-  /* color: ; */
-}
-
 nav div {
   text-align: center;
   display: grid;
 }
-
 #new-tweet-btn {
   display: block;
   background: none;
   border: none;
   outline: none;
-  /* color: #cae5f7; */
   color:#edb9d3;
   cursor: pointer;
   animation-name: floating;
@@ -38,24 +31,16 @@ nav div {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-
-#new-tweet-btn:hover {
-  /* animation-name: floating;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; */
+#nav-new-tweet.hide {
+  display: none;
+}
+.bold {
+  font-weight: bold;
 }
 
+/* animation for boucing button */
 @keyframes floating {
   from { transform: translate(0,  0px); }
   65%  { transform: translate(0, 8px); }
   to   { transform: translate(0, -0px); }    
-}
-
-#nav-new-tweet.hide {
-  display: none;
-}
-
-.bold {
-  font-weight: bold;
 }
