@@ -6,6 +6,7 @@ $(function() {
 
   // toggles the compose tweet section to show and hide
   $('#new-tweet-btn').click(function() {
+    $('.alert').hide();
     $('.new-tweet').slideToggle();
     $('textarea').focus();
   });
