@@ -5,14 +5,13 @@ Tweeter is a simple, single-page Twitter clone. It is AJAX-based and uses jQuery
 ## Final Product 
 
 Main Page - Desktop View
-!["Screenshot of desktop view of main page"](https://github.com/cphung1/tweeter/blob/master/public/images/Screen%20Shot%202020-02-27%20at%203.39.54%20PM.png)
+!["Screenshot of desktop view of main page"](https://github.com/cphung1/tweeter/blob/master/public/images/desktop-view.png)
 
 Main Page - Mobile View
-!["Screenshot of mobile view of main page"](https://github.com/cphung1/tweeter/blob/master/public/images/Screen%20Shot%202020-02-27%20at%203.55.05%20PM.png)
+!["Screenshot of mobile view of main page"](https://github.com/cphung1/tweeter/blob/master/public/images/mobile-view.png)
 
 Main Page - Mobile View: hover function and back to top button
-!["Screenshot of mobile view of main page w/ hover function and back to top button"](https://github.com/cphung1/tweeter/blob/master/public/images/Screen%20Shot%202020-02-27%20at%203.55.51%20PM.png)
-
+!["Screenshot of mobile view of main page w/ hover function and back to top button"](https://github.com/cphung1/tweeter/blob/master/public/images/hover-fxn-and-back-to-top-btn.png)
 
 
 
