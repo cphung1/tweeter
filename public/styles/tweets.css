@@ -32,12 +32,26 @@ article header span p {
 
 article footer {
   border-top: 4px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+article footer div {
+  display: none;
+  height: fit-content;
+  margin: 30px;
+}
+
+article:hover footer div {
+  display: block;
+  color: #cec9f0;
 }
 
 article:hover  header span p {
   display: flex;
   color: #cec9f0;
 }
+
 article:hover {
   box-shadow: 10px 10px #cec9f0;
 }
