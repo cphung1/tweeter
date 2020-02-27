@@ -11,7 +11,8 @@
 
   <!-- External Font -->
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,400i,700,700i&display=swap"
-    rel="stylesheet">
+  rel="stylesheet">
+
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -28,38 +29,44 @@
   <!-- New Tweet CSS -->
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
-    <!-- Error Msg CSS -->
-    <link rel="stylesheet" href="/styles/error-msg.css" type="text/css" />
+  <!-- Error Msg CSS -->
+  <link rel="stylesheet" href="/styles/error-msg.css" type="text/css" />
+
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
+
+  <!-- Momentjs -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
 
-  <!-- App JS -->
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-a11y="true"></script>
+
+
+  <!-- App JS --> 
   <script type="text/javascript" src="/scripts/client.js"></script>
       
   <!-- Charcter Count JS -->
   <script src="/scripts/composer-char-counter.js"></script>
 
-  <!-- Charcter Count JS -->
+  <!-- New Tweet Toggle JS -->
   <script src="/scripts/compose-btn.js"></script>
 
-  <!-- Font Awesome -->
-  <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-a11y="true"></script>
+  <!-- Scroll Up JS -->
+  <script src="/scripts/scroll-up-btn.js"></script>
+
 </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <div>
-        <p>Write a new tweet</p>
+      <div id="nav-new-tweet">
+        <label>Write a new tweet</label>
         <button id="new-tweet-btn"> 
           <i class="fas fa-angle-double-down"></i>
         </button>
       </div>
-      
     </nav>
 
     <header> 
@@ -74,6 +81,13 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <div>
+        <button id="back-to-top"> 
+          <i class="fas fa-angle-double-up icon-2x"></i>
+        </button>
+      </div>
+
       <div class="alert">
         <strong>Danger!</strong> Error
       </div>
@@ -106,7 +120,6 @@
           </footer>
          </article> -->
       </section>
-
     </main>
 
   </body>

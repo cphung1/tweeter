@@ -1,6 +1,9 @@
 // calculates and displays the character count of input
 $(function() {
   $('textarea').on('input', function() {
+
+    $('.alert').hide();
+    
     let len = $(this).val().length;
     let findCounter = $(this).parent().find('.counter');
     let counter = findCounter.text(140 - len);

@@ -31,4 +31,24 @@ main {
   position: relative;
 }
 
+#back-to-top {
+  display: none;
+  border-radius: 50%;
+  width: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+}
+
+#back-to-top.show {
+  display: block;
+}
+
 

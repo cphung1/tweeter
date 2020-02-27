@@ -1,6 +1,9 @@
 // toggle button for composing new tweet
 $(function() {  
 
+  // compose tweet box is hidden on page load
+  $('.new-tweet').hide()
+
   // toggles the compose tweet section 
   $('#new-tweet-btn').click(function() {
     $('.new-tweet').slideToggle();
