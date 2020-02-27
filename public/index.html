@@ -57,6 +57,7 @@
       </div>
     </nav>
 
+    <!-- User Profile -->
     <header> 
       <div class="center">
         <img src="/images/profile-hex.png">
@@ -68,16 +69,18 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- Back to top button -->
       <div>
         <button id="back-to-top"> 
           <i class="fas fa-angle-double-up icon-2x"></i>
         </button>
       </div>
 
-      <div class="alert">
-        <strong>Danger!</strong> Error
-      </div>
+      <!-- Error message if input is too long or empty -->
+      <div class="alert"></div>
 
+      <!-- Submit new tweet form -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form>
@@ -87,9 +90,8 @@
         </form>
       </section>
 
-      <section class="tweets-container">
-      </section>
+      <!-- Displays all tweets -->
+      <section class="tweets-container"></section>
     </main>
   </body>
-
 </html>

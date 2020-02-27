@@ -4,7 +4,7 @@ $(function() {
   // compose tweet box is hidden on page load
   $('.new-tweet').hide()
 
-  // toggles the compose tweet section 
+  // toggles the compose tweet section to show and hide
   $('#new-tweet-btn').click(function() {
     $('.new-tweet').slideToggle();
     $('textarea').focus();

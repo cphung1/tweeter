@@ -1,5 +1,4 @@
 $(function() { 
-
   // if scrolling back to top button will show
   // if scrolling back to top button will hide
   $(window).scroll(function() {

@@ -1,7 +1,6 @@
-// only runs once docuemnt is ready
 $(function() {  
   
-  // hides alert
+  // hides error alert
   // alert only shows when user input field is empty or too long
   $('.alert').hide();
 
@@ -13,7 +12,7 @@ $(function() {
     return div.innerHTML;
   }
 
-  //Creates the Tweet 
+  //Creates the Tweet to be posted 
   const createTweetElement = function(tweet) {
     let time = moment(tweet["created_at"]).fromNow();
     let $tweet = $(`
@@ -55,7 +54,7 @@ $(function() {
     }
   }
 
-  // get all tweets from /tweets and reders them 
+  // get all tweets from /tweets and renders them 
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET'})
       .done(function(arrayOfTweets) {
@@ -73,10 +72,10 @@ $(function() {
     let $inputLen = $(this).text();
     let $inputText = $(this).find('textarea').val().trim();
     if ($inputText === '' || $inputText === null) {
-      $('.alert').text("⚠️ Please enter text").show();
+      $('.alert').text("⚠️ Error: Please enter text").show();
       $(this).find('textarea').focus();
     } else if ($inputLen < 0) {
-      $('.alert').text("⚠️ Message is too long").show();
+      $('.alert').text("⚠️ Error: Message is too long").show();
       $(this).find('textarea').focus();
     } else {
       $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })
