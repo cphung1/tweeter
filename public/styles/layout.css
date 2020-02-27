@@ -34,17 +34,17 @@ main {
 #back-to-top {
   display: none;
   border-radius: 50%;
-  width: 60px;
+  width: 4rem;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 99;
   border: none;
   outline: none;
   background-color: red;
   color: white;
   cursor: pointer;
-  padding: 15px;
+  padding: 1rem;
 }
 
 #back-to-top.show {

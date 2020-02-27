@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    type="text/css" />
-
-  <!-- External Font -->
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,400i,700,700i&display=swap"
-  rel="stylesheet">
-
-
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
-  <!-- Nav CSS -->
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
-  <!-- Header CSS -->
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-
-  <!-- New Tweet CSS -->
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-  <!-- New Tweet CSS -->
-  <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-
-  <!-- Error Msg CSS -->
-  <link rel="stylesheet" href="/styles/error-msg.css" type="text/css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css" />
+    <!-- External Font -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,400i,700,700i&display=swap"
+    rel="stylesheet">
 
 
-  <!-- External JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <!-- Error Msg CSS -->
+    <link rel="stylesheet" href="/styles/error-msg.css" type="text/css" />
 
-  <!-- Momentjs -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
 
-  <!-- Font Awesome -->
-  <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-a11y="true"></script>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Momentjs -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-a11y="true"></script>
 
 
-  <!-- App JS --> 
-  <script type="text/javascript" src="/scripts/client.js"></script>
-      
-  <!-- Charcter Count JS -->
-  <script src="/scripts/composer-char-counter.js"></script>
-
-  <!-- New Tweet Toggle JS -->
-  <script src="/scripts/compose-btn.js"></script>
-
-  <!-- Scroll Up JS -->
-  <script src="/scripts/scroll-up-btn.js"></script>
-
-</head>
+    <!-- App JS --> 
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- Charcter Count JS -->
+    <script src="/scripts/composer-char-counter.js"></script>
+    <!-- New Tweet Toggle JS -->
+    <script src="/scripts/compose-btn.js"></script>
+    <!-- Scroll Up JS -->
+    <script src="/scripts/scroll-up-btn.js"></script>
+  </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
       <div id="nav-new-tweet">
-        <label>Write a new tweet</label>
+        <label><span class="bold">Write</span> a new tweet</label>
         <button id="new-tweet-btn"> 
           <i class="fas fa-angle-double-down"></i>
         </button>
@@ -73,7 +61,6 @@
       <div class="center">
         <img src="/images/profile-hex.png">
       </div>
-      <br>
       <div class="center">
         <h2>Your Name</h2>
       </div>
@@ -81,7 +68,6 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <div>
         <button id="back-to-top"> 
           <i class="fas fa-angle-double-up icon-2x"></i>
@@ -102,26 +88,8 @@
       </section>
 
       <section class="tweets-container">
-        <!-- <article>
-          <header>
-            <div>
-              <img src="/images/profile-hex.png">
-              <p>Your Name</p>
-            </div>
-            <span>
-              <p>User Handle</p>
-            </span>
-          </header>
-          
-          <p>Insert tweet here</p>
-
-          <footer>
-            <h6>time</h6>
-          </footer>
-         </article> -->
       </section>
     </main>
-
   </body>
 
 </html>

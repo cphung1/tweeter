@@ -10,7 +10,7 @@ textarea {
   border-bottom: 4px solid black;
   font-weight: bold;
   margin-bottom: 1em;
-  height: 2em
+  height: 3em;
 }
 
 
@@ -28,4 +28,5 @@ input[type="submit"] {
   color: #FFFFFF;
   font-family: "Bungee";
   float: left;
+  padding: 0.4rem;
 }

@@ -55,3 +55,7 @@ nav div {
 #nav-new-tweet.hide {
   display: none;
 }
+
+.bold {
+  font-weight: bold;
+}

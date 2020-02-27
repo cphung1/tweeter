@@ -4,7 +4,7 @@ article {
   padding: 1em;
   margin-top: 2em;
   margin-bottom: 2em;
-  border-radius: 25px;
+  border-radius: 1rem;
 }
 
 article header {
@@ -19,7 +19,7 @@ article header {
 
 article header img {
   float: left;
-  height: 3.5em;
+  height: 5.5rem;
 }
 
 article header div p {
@@ -39,7 +39,7 @@ article footer {
 article footer div {
   display: none;
   height: fit-content;
-  margin: 30px;
+  margin: 2rem;
 }
 
 article:hover footer div {
@@ -53,7 +53,7 @@ article:hover  header span p {
 }
 
 article:hover {
-  box-shadow: 10px 10px #cec9f0;
+  box-shadow: 0.6rem 0.6rem #cec9f0;
 }
 
 .tweetText {

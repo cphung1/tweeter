@@ -13,5 +13,4 @@ $(function() {
       counter.removeClass("negativeNum");
     }
   });
-
 });
