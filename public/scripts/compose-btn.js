@@ -7,6 +7,7 @@ $(function() {
   // toggles the compose tweet section 
   $('#new-tweet-btn').click(function() {
     $('.new-tweet').slideToggle();
+    $('textarea').focus();
   });
 
   // if scrolling unable to click compose tweet button; button hides
