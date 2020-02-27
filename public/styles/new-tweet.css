@@ -30,3 +30,12 @@ input[type="submit"] {
   float: left;
   padding: 0.4rem;
 }
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    width: 60%;
+    float: right;
+    margin-bottom: 1rem;
+  }
+
+}
