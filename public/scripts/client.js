@@ -1,11 +1,12 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
+// only runs once docuemnt is ready
 $(function() {  
+  
+  // hides alert
+  // alert only shows when user input field is empty or too long
+  $('.alert').hide();
 
+
+  //prevents xss attacks
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -32,7 +33,7 @@ $(function() {
         </footer>
       </article>
       `).addClass('tweet');
-  
+
     return $tweet;
   }
 
@@ -49,7 +50,7 @@ $(function() {
     }
   }
 
-  // get all tweet objects and reders them 
+  // get all tweets from /tweets and reders them 
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET'})
       .done(function(arrayOfTweets) {
@@ -59,6 +60,8 @@ $(function() {
   }
 
   // upon clicking submit form checks if valid input
+  // if input is empty, displays an error
+  // if input is too long, displays an error
   // if valid input loads new tweet on page
   $('.new-tweet form').submit(function() {
     event.preventDefault();
@@ -74,11 +77,13 @@ $(function() {
       $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })
         .done(function() {
           loadTweets();
+          $('textarea').parent().find('.counter').text(140);
         })
+      $(this).find('textarea').focus();
     }
   })
 
-  // inital load of all the tweets 
+  // inital load of all existing tweets onto page
   loadTweets();
 
 });
